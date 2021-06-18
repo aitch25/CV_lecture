@@ -22,7 +22,7 @@ if __name__=="__main__":
     for i in range(p_cnt):
         for j in range(p_cnt):
             p_img = img[(p_size*i):(p_size*(i+1)), (p_size*j):(p_size*(j+1))]
-            cv.imwrite('./data/output/part_' + str(i) + str(j) + '.png', p_img)
-            #cv.imwrite('./data/output/part_' + str(suf_idx[idx]) + '.png', p_img)
+            cv.imwrite('./data/output/2d/part_' + str(i) + str(j) + '.png', p_img)
+            #cv.imwrite('./data/output/2d/part_' + str(suf_idx[idx]) + '.png', p_img)
             idx += 1
 
