@@ -143,8 +143,11 @@ if __name__=="__main__":
     top_left_idx = checker_top_left(img_lst, mWidth=8)
     first_lines = solver_2d(img_lst, top_left_idx, mWidth=8)
 
-    print(check_sims_B(img_lst[40], img_lst[48]))
-    print(check_sims_B(img_lst[40], img_lst[48]))
+    for i in range(64):
+        print(i, check_sims_T(img_lst[40], img_lst[i]))
+
+    cv.imshow('result', np.concatenate((img_lst[40], img_lst[48]), axis=0))
+    cv.waitKey(0)
     exit()
 
     for i in range(8):
