@@ -144,7 +144,9 @@ if __name__=="__main__":
     first_lines = solver_2d(img_lst, top_left_idx, mWidth=8)
 
     for i in range(64):
-        print(i, check_sims_T(img_lst[40], img_lst[i]))
+        print(i, check_sims_B(img_lst[40], img_lst[i]))
+        cv.imshow('result', np.concatenate((img_lst[40], img_lst[i]), axis=0))
+        cv.waitKey(0)
 
     cv.imshow('result', np.concatenate((img_lst[40], img_lst[48]), axis=0))
     cv.waitKey(0)
